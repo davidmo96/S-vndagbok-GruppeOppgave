@@ -1,19 +1,19 @@
 
 overViewUpdate();
-//addOverViewTable();
+addOverViewTable();
 function overViewUpdate(){
  if(model.app.currentPage !== "overviewpage"){
 
     
     app.innerHTML = `
-    test
+         <tr class="table"></tr>
     `
     }
 
 }
 
 
-/*function addOverViewTable(){
+function addOverViewTable(){
 
 const tableFill = document.getElementsByClassName("table")[0]
  let i = 0;
@@ -28,7 +28,7 @@ const tableFill = document.getElementsByClassName("table")[0]
 
                         </tr>`
 
-/*model.days.forEach( noe =>{
+    model.days.forEach( noe =>{
 
     html += `<td>${noe.at(i)}</td>`
     tableFill.innerHTML = html;
@@ -42,7 +42,7 @@ const tableFill = document.getElementsByClassName("table")[0]
     */
 
 
-/*})
+})
 
 
 
