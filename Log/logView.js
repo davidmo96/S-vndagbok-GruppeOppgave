@@ -5,11 +5,23 @@ function logView() {
     logPage.innerHTML = /*HTML*/ `
     
     <h1 id="logHeader"> Logg </h1>
+
+    <div class="dropdown">
+        <button class="dropbtn">
+        <img src="Log/menu.png" alt="Button Description" width="25" height="25">
+        </button>
+            <div class="dropdown-content">
+                <button>Oversikt</a>
+                <button>Rediger søvnønsker</a>
+                <button>Logg ut</a>
+            </div>
+    </div>
+    <br>
     <table>
         <tr>
             <th>Dag</th>
-            <th>Når sto du opp?</th>
             <th>Når la du deg?</th>
+            <th>Når sto du opp?</th>
             <th>Antall timer søvn:</th>
             <th>Humør 1-5</th>
             <th>Søvnkvalitet 1-5</th>
@@ -17,9 +29,10 @@ function logView() {
         </tr>
         <tbody id="logTable"></tbody>
     </table>
-`
+    `
 makeLog()
 }
+
 
 function makeLog(){
     const logList = model.sleepLog[0].list;
@@ -31,9 +44,9 @@ function makeLog(){
         html += /*HTML*/ `
         <tr>
             <td>${day.dayName}</td>
-            <td>${day.wakeUp ?? ''}</td>
             <td>${day.bedTime ?? ''}</td>
-            <td>${calculateSleep()}</td>
+            <td>${day.wakeUp ?? ''}</td>
+            <td>${day.calculatedSleep}</td>
             <td>${day.mood ?? ''}</td>
             <td>${day.sleepQuality ?? ''}</td>
             <td>${day.notes ?? ''}</td>
@@ -42,3 +55,5 @@ function makeLog(){
     }
     document.getElementById('logTable').innerHTML = html
 }
+
+
