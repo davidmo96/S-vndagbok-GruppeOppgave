@@ -6,10 +6,10 @@ function updateProfileView() {
   const userGoals = model.goals[0];
 
   app.innerHTML = /*HTML*/ `
-       <main>
+       <main class=profile-page>
             <header>
                 <h1>${currentUser.displayName}</h1>
-                <button>Rediger Mål</button>
+                <button onclick="editGoals()">Rediger Mål</button>
             </header>
 
             <section>
@@ -29,7 +29,7 @@ function updateProfileView() {
             </section>
 
             <footer>
-                <button>Lagre</button>
+                <button onclick="saveGoals()">Lagre</button>
             </footer>
         </main>
     `;
