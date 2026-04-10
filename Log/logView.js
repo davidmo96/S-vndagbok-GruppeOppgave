@@ -13,9 +13,9 @@ function logView() {
         <img src="Log/menu.png" alt="Button Description" width="25" height="25">
         </button>
             <div class="dropdown-content">
-                <button>Oversikt</a>
-                <button>Rediger søvnønsker</a>
-                <button>Logg ut</a>
+                <button onclick="" class="dropdownContentButtons">Oversikt</a>
+                <button onclick="" class="dropdownContentButtons">Rediger søvnønsker</a>
+                <button onclick="" class="dropdownContentButtons">Logg ut</a>
             </div>
     </div>
     <br>
