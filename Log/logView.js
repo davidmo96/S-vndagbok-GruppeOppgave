@@ -3,6 +3,8 @@ const logPage = document.getElementById('logView')
 logView()
 function logView() {
     logPage.innerHTML = /*HTML*/ `
+
+    <img id="shutiLogo" src="Shuti Logo.png">
     
     <h1 id="logHeader"> Logg </h1>
 
