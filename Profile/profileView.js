@@ -18,7 +18,8 @@ function updateProfileView() {
             
             <section>
                 <span>Mengde søvn:</span>
-                <span>${userGoals.amountSleptGoal} Timer</span>
+                <span>${userGoals.amountSleptHours} Timer</span>
+                <span>${userGoals.amountSleptMinutes} Minutter</span>
             </section>
 
             <section>
