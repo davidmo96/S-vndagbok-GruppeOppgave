@@ -22,6 +22,7 @@ const model = {
     },
     overview: {
       averagesleep: null,
+      editmode: false,
     },
     log: {
       id: null,
@@ -38,6 +39,7 @@ const model = {
       amountSleptGoal: null,
     },
   },
+
 
   days: [
     "Mandag",
