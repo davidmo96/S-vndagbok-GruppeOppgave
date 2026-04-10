@@ -18,15 +18,17 @@ function logView() {
     </div>
     <br>
     <table>
-        <tr>
-            <th>Dag</th>
-            <th>Når la du deg?</th>
-            <th>Når sto du opp?</th>
-            <th>Antall timer søvn:</th>
-            <th>Humør 1-5</th>
-            <th>Søvnkvalitet 1-5</th>
-            <th>Kommentar:</th>
-        </tr>
+        <thead>
+            <tr>
+                <th>Dag</th>
+                <th>Når sto du opp?</th>
+                <th>Når la du deg?</th>
+                <th>Antall timer søvn:</th>
+                <th>Humør 1-5</th>
+                <th>Søvnkvalitet 1-5</th>
+                <th>Kommentar:</th>
+            </tr>
+            </thead>
         <tbody id="logTable"></tbody>
     </table>
     `
