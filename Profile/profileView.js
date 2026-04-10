@@ -8,9 +8,13 @@ function updateProfileView() {
   app.innerHTML = /*HTML*/ `
     <main class="profile-page">
         <header>
+            <img id="shutiLogo" src="Shuti Logo.png">
+        </header>
+
+        <section>
             <h1>${currentUser.displayName}</h1>
             <button onclick="editGoals()">Rediger Mål</button>
-        </header>
+        </section>
 
         <section>
             <h2>Mål for søvn:</h2>
