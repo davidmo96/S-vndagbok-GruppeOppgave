@@ -1,7 +1,7 @@
 const overViewPage = document.getElementById('app')
 
 showOverView()
-function showOverView() {
+function showOverView(index) {
     overViewPage.innerHTML = /*HTML*/ `
     
     <h1 id="overViewHeader"> Oversikt </h1>
@@ -14,19 +14,19 @@ function showOverView() {
             <th>Humør 1-5</th>
             <th>Søvnkvalitet 1-5</th>
             <th>Kommentar:</th>
+            <th>Rediger:</th>
         </tr>
         <tbody id="overViewTable"></tbody>
     </table>
 
-    <button onclick="overViewEditMode()">Rediger</button>
 `
-addOverViewTable()
+addOverViewTable(index)
 }
 
-function addOverViewTable(){
+function addOverViewTable(index){
     const tableList = model.sleepLog[0].list;
     let html = '';
-        if(model.viewState.editmod !== true){
+        if(model.viewState.editmode !== true){
          for (let i = 0; i < tableList.length; i++) {
             const day = tableList[i];
 
@@ -39,28 +39,29 @@ function addOverViewTable(){
                 <td>${day.mood ?? ''}</td>
                 <td>${day.sleepQuality ?? ''}</td>
                 <td>${day.notes ?? ''}</td>
+                <td><button onclick="overViewEditMode(${i})">Rediger</button></td>
              </tr>
                           `
     }
         }
   
 
-    else if(model.viewState.editmod === true){
-        for (let i = 0; i < tableList.length; i++) {
-            const day = tableList[i];
+    else if(model.viewState.editmode === true){
+            const day = tableList[index];
 
             html += /*HTML*/ `
              <tr>
               <td>  ${day.dayName}</td>
-              <td>  <input placeholder="${day.bedTime ?? ''}" type="time"></td>
-              <td>  <input placeholder="${day.wakeUp ?? ''}" type="time"></td>
+              <td>  <input  type="time"  onchange="model.viewState.log.bedTime = this.value"></td>
+              <td>  <input  type="time" onchange="model.viewState.log.wakeUp = this.value"></td>
               <td>  ${day.calculatedSleep}></td>
-              <td>  <input placeholder="${day.mood ?? ''}" type="number" min="1" max="5"></td>
-              <td>  <input placeholder="${day.sleepQuality ?? ''}"type="number" min="1" max="5"></td>
-              <td>  <input placeholder="${day.notes ?? ''}" type="text"></td>
+              <td>  <input  type="number" min="1" max="5"onchange="model.viewState.log.mood = this.value" ></td>
+              <td>  <input type="number" min="1" max="5"onchange="model.viewState.log.sleepQuality = this.value" ></td>
+              <td>  <input  type="text"onchange="model.viewState.log.notes = this.value"></td>
+              <td><button onclick="insertData()">Legg Til</button></td>
              </tr>
                           `
-        }
+        
     }
     document.getElementById('overViewTable').innerHTML = html
 }
