@@ -1,4 +1,4 @@
-const logPage = document.getElementById('loggView')
+const logPage = document.getElementById('logView')
 
 logView()
 function logView() {

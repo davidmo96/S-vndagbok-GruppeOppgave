@@ -6,7 +6,7 @@ function overViewUpdate(){
 
     
     app.innerHTML = `
-         <tr class="table"></tr>
+         <h1 class="table"></h1>
     `
     }
 
@@ -30,20 +30,18 @@ const tableFill = document.getElementsByClassName("table")[0]
 
     model.days.forEach( noe =>{
 
-    html += `<td>${noe.at(i)}</td>`
-    tableFill.innerHTML = html;
+    html += `<td>${noe}</td>`
     i += 1;
     console.log(noe)
-
- /* const tableData = document.createElement("td");
+    
+    /* const tableData = document.createElement("td");
     tableData.innerHTML = noe.at(i);
     tableFill.appendChild(tableData);
     console.log(noe)
     */
-
-
+   
+   
 })
-
-
+tableFill.innerHTML = html;
 
 }
