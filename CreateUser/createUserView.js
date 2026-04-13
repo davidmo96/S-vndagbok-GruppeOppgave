@@ -14,7 +14,7 @@ function createUserView() {
     <input 
         type="text" 
         placeholder="Brukernavn" 
-        oninput = "model.viewstate.createUser.username = this.value"
+        oninput = "model.viewState.createUser.username = this.value"
         class="input" 
         required>
     <br>
@@ -22,7 +22,7 @@ function createUserView() {
     <input 
         type="text" 
         placeholder="Passord" 
-        oninput = "model.viewstate.createUser.password = this.value"
+        oninput = "model.viewState.createUser.password = this.value"
         class="input" 
         required>
     <br>
@@ -30,7 +30,7 @@ function createUserView() {
     <input 
         type="text" 
         placeholder="Gjenta passord" 
-        oninput = "model.viewstate.createUser.repeatPassword = this.value"
+        oninput = "model.viewState.createUser.repeatPassword = this.value"
         class="input" 
         required>
     <br>
@@ -41,12 +41,25 @@ function createUserView() {
 }
 
 
-function createUser(username, password) {
-    const newUser = {
-        username: username,
-        password: password,
-    }
-    viewState.login.push(newUser)
+function createUser() {
 
+    if (model.viewState.createUser.password !== model.viewState.createUser.repeatPassword) {
+        alert("Passordene matcher ikke")
+        return
+    }
+    model.users.push({
+        id: generateId(),
+        displayName: model.viewState.createUser.username,
+        username: model.viewState.createUser.username,
+        password: model.viewState.createUser.password,
+    })
     return loginView()
+}
+
+function generateId(){
+    const number = Math.floor(Math.random()*999)
+    if(model.users.find(user => user.id == number)){
+        generateId()
+    }
+    return number
 }
