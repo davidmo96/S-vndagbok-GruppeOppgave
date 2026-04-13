@@ -5,13 +5,13 @@ function showOverView(index) {
     overViewPage.innerHTML = /*HTML*/ `
     
 
-        <img id="shutiLogo" src="Shuti Logo.png">
+        <img id="shutiLogo" src="Pictures/Shuti Logo.png">
     
      <h1 id="overViewHeader" onclick="overViewEditMode()"> Oversikt </h1>
 
     <div class="dropdown">
         <button class="dropbtn">
-        <img src="Log/menu.png" alt="Button Description" width="25" height="25">
+        <img src="Pictures/menu.png" alt="Button Description" width="25" height="25">
         </button>
             <div class="dropdown-content">
                 <button onclick="" class="dropdownContentButtons">Oversikt</a>
