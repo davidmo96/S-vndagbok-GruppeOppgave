@@ -1,40 +1,45 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  font-size: large;
+  font-size: 1.25rem;
   background-color: #0d3b66;
   color: white;
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 #shutiLogo {
-  width: 150px;
+  width: 190px;
   height: auto;
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 50px auto;
 }
 
 .profile-page {
   width: 100%;
-  max-width: 800px;
-  padding: 40px;
+  padding-top: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-header {
-  width: 100%;
+.user-identity {
+  font-size: 2.5rem;
   display: flex;
-  justify-content: center;
-  position: relative;
-  margin-bottom: 50px;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
 }
 
-header button {
-  position: absolute;
-  right: 0;
+.edit-button {
+  display: flex;
+  justify-content: center;
+}
+
+.user-goals {
+  margin-top: 20px;
+  font-size: 1.5rem;
 }
 
 h2 {
@@ -60,17 +65,14 @@ section {
 }
 
 button {
-  background-color: #e0e0e0;
-  border: none;
-  padding: 8px 20px;
+  background-color: #4a6fa5;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 10px 24px;
   cursor: pointer;
   color: black;
+  font-size: large;
 }
 
 footer {
-  margin-top: 60px;
-}
-
-footer button {
-  padding: 10px 80px;
+  margin-top: 40px;
 }
