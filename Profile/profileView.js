@@ -55,6 +55,8 @@ function updateProfileView() {
                 : `<span class="goal-box">${userGoals.wakeUpGoal}</span>`
             }
         </section>
+
+        ${getSleepGoalWarning()}
     </main>
 `;
 }
