@@ -27,14 +27,10 @@ body {
 .user-identity {
   font-size: 2.5rem;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   margin-bottom: 100px;
-}
-
-.edit-button {
-  display: flex;
-  justify-content: center;
 }
 
 .user-goals {
