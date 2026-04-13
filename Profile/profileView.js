@@ -22,10 +22,6 @@ function updateProfileView() {
             }
         </section>
 
-        <section class="edit-button">
-            
-        </section>
-
         <section>
             <h2>Mål for søvn:</h2>
         </section>
