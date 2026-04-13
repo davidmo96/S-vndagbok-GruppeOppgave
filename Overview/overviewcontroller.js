@@ -1,3 +1,5 @@
+
+//Bytter mellom edit view og vanlig view bed å endre verdien til "editmode" i viewstate.
 function overViewEditMode(index){
     if(model.viewState.editmode !== true){
         model.viewState.editmode = true;
@@ -11,12 +13,11 @@ function overViewEditMode(index){
 
 }
 
-function insertData(index){
-    sleepHoursCalculated(index);
-}
-
+//Kalkulerer tid sovet og setter tallet i viewstate hoursSlept
 function sleepHoursCalculated(index){
+    // Sjekker om tallet på leggetid er høyere eller lavere enn wakeup. Mattestykket ser annerledes ut ettersom hvilken.
     if (model.viewState.log.bedTime > model.viewState.log.wakeUp){
+            //Splitter opp string med Timer og Minutter separert. Så ganger den dem med 10 hver, plusser sammen og deler med 60 for å få riktige tall bak komma. Feks 7.5 Timer heller enn 7 timer og 30 minutter
              bedTimeHourAndMin =model.viewState.log.bedTime.split(":")
              bedTimeHour = parseInt(bedTimeHourAndMin[0], 10);
              bedTimeMinute = parseInt(bedTimeHourAndMin[1], 10);
@@ -27,9 +28,10 @@ function sleepHoursCalculated(index){
              wakeUpMinute = parseInt(wakeUpHourAndMin[1], 10);
              wakeUpCalced = Number(wakeUpHour+wakeUpMinute/60);
              console.log(wakeUpCalced);
+             //Selve mattestykket for timer sovet
              sleepHours = 24-(Number(bedTimeCalced-wakeUpCalced));
              console.log("PM");
-             model.viewState.log.hoursSlept = sleepHours
+             model.viewState.log.hoursSlept = sleepHours.toFixed(2); //To fixed runder opp eller ned til 2 tall etter komma så man får 7.6 istedenfor 7.632983
              console.log(sleepHours);
              pushToData(index)
     }
@@ -44,17 +46,19 @@ function sleepHoursCalculated(index){
              wakeUpMinute = parseInt(wakeUpHourAndMin[1], 10);
              wakeUpCalced = Number(wakeUpHour+wakeUpMinute/60);
              console.log(wakeUpCalced);
+             //Selve mattestykket for timer sovet
              sleepHours = Number(wakeUpCalced-bedTimeCalced);
              console.log("AM");
-             model.viewState.log.hoursSlept = sleepHours
+             model.viewState.log.hoursSlept = sleepHours.toFixed(2);  //To fixed runder opp eller ned til 2 tall etter komma så man får 7.6 istedenfor 7.632983
              console.log(sleepHours);
             pushToData(index)
     }
     else{
-        console.log(error);
+        console.log("error");
     }
 }
 
+//Tar all data som er mellomlagret i viewstate og setter inn i data delen av modellen.
 function pushToData(index){
     console.log(index);
      i = index
