@@ -9,7 +9,7 @@ function updateProfileView() {
   profileView.innerHTML = /*HTML*/ `
     <main class="profile-page">
         <header>
-            <img id="shutiLogo" src="Shuti Logo.png">
+            <img id="shutiLogo" src="Pictures/Shuti Logo.png">
         </header>
 
         <section class="user-identity">
