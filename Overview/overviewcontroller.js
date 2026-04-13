@@ -6,15 +6,12 @@ function overViewEditMode(index){
     }
     else if (model.viewState.editmode === true){
         model.viewState.editmode = false;
-        showOverView(index);
+        showOverView();
     }
 
 }
 
 function insertData(){
-    console.log(model.viewState.log.bedTime)
-    console.log(model.viewState.log.mood)
-    console.log(model.viewState.log.notes)
     sleepHoursCalculated();
 }
 
@@ -32,7 +29,9 @@ function sleepHoursCalculated(){
              console.log(wakeUpCalced);
              sleepHours = 24-(Number(bedTimeCalced-wakeUpCalced));
              console.log("PM");
+             model.viewState.log.hoursSlept = sleepHours
              console.log(sleepHours);
+             pushToData()
     }
     else if (model.viewState.log.bedTime <= model.viewState.log.wakeUp){
              bedTimeHourAndMin =model.viewState.log.bedTime.split(":")
@@ -47,10 +46,22 @@ function sleepHoursCalculated(){
              console.log(wakeUpCalced);
              sleepHours = Number(wakeUpCalced-bedTimeCalced);
              console.log("AM");
+             model.viewState.log.hoursSlept = sleepHours
              console.log(sleepHours);
-             
+            pushToData()
     }
     else{
         console.log(error);
     }
+}
+
+function pushToData(){
+     i = 0
+     model.sleepLog[i].list[0].mood = model.viewState.log.mood;
+     model.sleepLog[i].list[0].sleepQuality = model.viewState.log.sleepQuality;
+     model.sleepLog[i].list[0].notes = model.viewState.log.notes;
+     model.sleepLog[i].list[0].bedTime = model.viewState.log.bedTime;
+     model.sleepLog[i].list[0].wakeUp = model.viewState.log.wakeUp;
+     model.sleepLog[i].list[0].hoursSlept = model.viewState.log.hoursSlept;
+    overViewEditMode();
 }

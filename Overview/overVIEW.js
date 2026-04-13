@@ -33,12 +33,12 @@ function addOverViewTable(index){
             html += /*HTML*/ `
              <tr>
                 <td>${day.dayName}</td>
-                <td>${day.bedTime ?? ''}</td>
-                <td>${day.wakeUp ?? ''}</td>
-                <td>${day.calculatedSleep}</td>
-                <td>${day.mood ?? ''}</td>
-                <td>${day.sleepQuality ?? ''}</td>
-                <td>${day.notes ?? ''}</td>
+                <td>${day.bedTime}</td>
+                <td>${day.wakeUp}</td>
+                <td>${day.hoursSlept}</td>
+                <td>${day.mood}</td>
+                <td>${day.sleepQuality}</td>
+                <td>${day.notes}</td>
                 <td><button onclick="overViewEditMode(${i})">Rediger</button></td>
              </tr>
                           `
@@ -54,7 +54,6 @@ function addOverViewTable(index){
               <td>  ${day.dayName}</td>
               <td>  <input  type="time"  onchange="model.viewState.log.bedTime = this.value"></td>
               <td>  <input  type="time" onchange="model.viewState.log.wakeUp = this.value"></td>
-              <td>  ${day.calculatedSleep}></td>
               <td>  <input  type="number" min="1" max="5"onchange="model.viewState.log.mood = this.value" ></td>
               <td>  <input type="number" min="1" max="5"onchange="model.viewState.log.sleepQuality = this.value" ></td>
               <td>  <input  type="text"onchange="model.viewState.log.notes = this.value"></td>
