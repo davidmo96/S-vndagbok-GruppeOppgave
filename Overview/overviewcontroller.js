@@ -6,16 +6,16 @@ function overViewEditMode(index){
     }
     else if (model.viewState.editmode === true){
         model.viewState.editmode = false;
-        showOverView();
+        showOverView(index);
     }
 
 }
 
-function insertData(){
-    sleepHoursCalculated();
+function insertData(index){
+    sleepHoursCalculated(index);
 }
 
-function sleepHoursCalculated(){
+function sleepHoursCalculated(index){
     if (model.viewState.log.bedTime > model.viewState.log.wakeUp){
              bedTimeHourAndMin =model.viewState.log.bedTime.split(":")
              bedTimeHour = parseInt(bedTimeHourAndMin[0], 10);
@@ -31,7 +31,7 @@ function sleepHoursCalculated(){
              console.log("PM");
              model.viewState.log.hoursSlept = sleepHours
              console.log(sleepHours);
-             pushToData()
+             pushToData(index)
     }
     else if (model.viewState.log.bedTime <= model.viewState.log.wakeUp){
              bedTimeHourAndMin =model.viewState.log.bedTime.split(":")
@@ -48,20 +48,21 @@ function sleepHoursCalculated(){
              console.log("AM");
              model.viewState.log.hoursSlept = sleepHours
              console.log(sleepHours);
-            pushToData()
+            pushToData(index)
     }
     else{
         console.log(error);
     }
 }
 
-function pushToData(){
-     i = 0
-     model.sleepLog[i].list[0].mood = model.viewState.log.mood;
-     model.sleepLog[i].list[0].sleepQuality = model.viewState.log.sleepQuality;
-     model.sleepLog[i].list[0].notes = model.viewState.log.notes;
-     model.sleepLog[i].list[0].bedTime = model.viewState.log.bedTime;
-     model.sleepLog[i].list[0].wakeUp = model.viewState.log.wakeUp;
-     model.sleepLog[i].list[0].hoursSlept = model.viewState.log.hoursSlept;
-    overViewEditMode();
+function pushToData(index){
+    console.log(index);
+     i = index
+     model.sleepLog[0].list[i].mood = model.viewState.log.mood;
+     model.sleepLog[0].list[i].sleepQuality = model.viewState.log.sleepQuality;
+     model.sleepLog[0].list[i].notes = model.viewState.log.notes;
+     model.sleepLog[0].list[i].bedTime = model.viewState.log.bedTime;
+     model.sleepLog[0].list[i].wakeUp = model.viewState.log.wakeUp;
+     model.sleepLog[0].list[i].hoursSlept = model.viewState.log.hoursSlept;
+    overViewEditMode(index);
 }

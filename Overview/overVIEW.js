@@ -57,7 +57,7 @@ function addOverViewTable(index){
               <td>  <input  type="number" min="1" max="5"onchange="model.viewState.log.mood = this.value" ></td>
               <td>  <input type="number" min="1" max="5"onchange="model.viewState.log.sleepQuality = this.value" ></td>
               <td>  <input  type="text"onchange="model.viewState.log.notes = this.value"></td>
-              <td><button onclick="insertData()">Legg Til</button></td>
+              <td><button onclick="insertData(${index})">Legg Til</button></td>
              </tr>
                           `
         
