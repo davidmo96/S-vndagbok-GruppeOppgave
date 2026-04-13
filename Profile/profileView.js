@@ -14,11 +14,11 @@ function updateProfileView() {
 
         <section class="user-identity">
         <span>${currentUser.displayName}</span>
-        <span></span>${
-          isEditing
-            ? `<button onclick="saveGoals()">Fullfør</button>`
-            : `<button onclick="editGoals()">Rediger Mål</button>`
-        }
+            ${
+              isEditing
+                ? `<button onclick="saveGoals()">Fullfør</button>`
+                : `<button onclick="editGoals()">Rediger Mål</button>`
+            }
         </section>
 
         <section class="edit-button">
