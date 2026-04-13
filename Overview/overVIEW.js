@@ -32,13 +32,13 @@ function addOverViewTable(index){
 
             html += /*HTML*/ `
              <tr>
-                <td>${day.dayName}</td>
-                <td>${day.bedTime}</td>
-                <td>${day.wakeUp}</td>
-                <td>${day.hoursSlept}</td>
-                <td>${day.mood}</td>
-                <td>${day.sleepQuality}</td>
-                <td>${day.notes}</td>
+                <td>${day.dayName ?? ''}</td>
+                <td>${day.bedTime?? ''}</td>
+                <td>${day.wakeUp?? ''}</td>
+                <td>${day.hoursSlept?? ''}</td>
+                <td>${day.mood?? ''}</td>
+                <td>${day.sleepQuality?? ''}</td>
+                <td>${day.notes?? ''}</td>
                 <td><button onclick="overViewEditMode(${i})">Rediger</button></td>
              </tr>
                           `
