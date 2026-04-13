@@ -44,9 +44,15 @@ function addOverViewTable(index){
         if(model.viewState.editmode !== true){
          for (let i = 0; i < tableList.length; i++) {
             const day = tableList[i];
-
+            let color = "";
+            if(day.hoursSlept >= 8){
+                color = "green";
+            }
+            else if(day.hoursSlept < 8 && day.hoursSlept != null){
+                color = "red";
+            }
             html += /*HTML*/ `
-             <tr>
+             <tr class=${color}>
                 <td>${day.dayName ?? ''}</td>
                 <td>${day.bedTime?? ''}</td>
                 <td>${day.wakeUp?? ''}</td>
@@ -70,8 +76,8 @@ function addOverViewTable(index){
               <td>  <input  type="time"  onchange="model.viewState.log.bedTime = this.value"></td>
               <td>  <input  type="time" onchange="model.viewState.log.wakeUp = this.value"></td>
               <td></td>
-              <td>  <input  type="number" min="1" max="5"onchange="model.viewState.log.mood = this.value" ></td>
-              <td>  <input type="number" min="1" max="5"onchange="model.viewState.log.sleepQuality = this.value" ></td>
+              <td>  <input  type="number" min="1" max="5"onchange="model.viewState.log.mood = checkValueScale(this.value)" ></td>
+              <td>  <input type="number" min="1" max="5"onchange="model.viewState.log.sleepQuality = checkValueScale(this.value)" ></td>
               <td>  <input  type="text"onchange="model.viewState.log.notes = this.value"></td>
               <td><button onclick="sleepHoursCalculated(${index})" id="overViewHeader">Legg Til</button></td>
              </tr>

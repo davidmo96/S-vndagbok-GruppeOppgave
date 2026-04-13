@@ -26,6 +26,8 @@ body {
     border-radius: 0.5rem;
 }
 
+
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -86,4 +88,13 @@ th {
 
 .dropdown:hover .dropbtn {
     background-color: #37599b;
+}
+
+
+.green td{
+    background-color: green;
+}
+
+.red td{
+    background-color: red;
 }

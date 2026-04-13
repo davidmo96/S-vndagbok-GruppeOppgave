@@ -70,3 +70,15 @@ function pushToData(index){
      model.sleepLog[0].list[i].hoursSlept = model.viewState.log.hoursSlept;
     overViewEditMode(index);
 }
+
+function checkValueScale(index){
+    if(index > 5){
+        return 5
+    }
+    else if(index < 1){
+        return 1
+    }
+    else {
+        return index;
+    }
+}
