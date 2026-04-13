@@ -1,0 +1,89 @@
+body {
+    background-color: #2E4172;
+    background: #004680;
+    background: -webkit-linear-gradient(to right, #4484BA, #004680);
+    background: linear-gradient(to right, #4484BA, #004680);
+    font-size: large;
+    font-family: serif;
+}
+
+
+#shutiLogo {
+    width: 10%;
+    height: 10%;
+    position: center;
+    display: block;
+    margin: auto;
+}
+
+#overViewHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #E3EDF5;
+    background-color: #2E4A66;
+    font-family: serif;
+    border-radius: 0.5rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+    background-color: #6689a5;
+    color: #000000;
+}
+
+th {
+    background-color: #4c6aa5;
+}
+
+
+/*DROPDOWN MENU*/
+
+.dropdown {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 12px;
+}
+
+.dropbtn {
+    background-color: #4c6aa5;
+    padding: 5px;
+    border-radius: 0.3rem;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdownContentButtons {
+    text-align: left;
+    background-color: #aebcdabb;
+    border: none;
+    padding: 5%;
+    font-size: large;
+    font-family: serif;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #37599b;
+}

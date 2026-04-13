@@ -4,7 +4,22 @@ showOverView()
 function showOverView(index) {
     overViewPage.innerHTML = /*HTML*/ `
     
-    <h1 id="overViewHeader"> Oversikt </h1>
+
+        <img id="shutiLogo" src="Shuti Logo.png">
+    
+     <h1 id="overViewHeader" onclick="overViewEditMode()"> Oversikt </h1>
+
+    <div class="dropdown">
+        <button class="dropbtn">
+        <img src="Log/menu.png" alt="Button Description" width="25" height="25">
+        </button>
+            <div class="dropdown-content">
+                <button onclick="" class="dropdownContentButtons">Oversikt</a>
+                <button onclick="" class="dropdownContentButtons">Rediger søvnønsker</a>
+                <button onclick="" class="dropdownContentButtons">Logg ut</a>
+            </div>
+    </div>
+    <br>
     <table>
         <tr>
             <th>Dag</th>
@@ -39,7 +54,7 @@ function addOverViewTable(index){
                 <td>${day.mood?? ''}</td>
                 <td>${day.sleepQuality?? ''}</td>
                 <td>${day.notes?? ''}</td>
-                <td><button onclick="overViewEditMode(${i})">Rediger</button></td>
+                <td><button onclick="overViewEditMode(${i})" id="overViewHeader">Rediger</button></td>
              </tr>
                           `
     }
@@ -54,10 +69,11 @@ function addOverViewTable(index){
               <td>  ${day.dayName}</td>
               <td>  <input  type="time"  onchange="model.viewState.log.bedTime = this.value"></td>
               <td>  <input  type="time" onchange="model.viewState.log.wakeUp = this.value"></td>
+              <td></td>
               <td>  <input  type="number" min="1" max="5"onchange="model.viewState.log.mood = this.value" ></td>
               <td>  <input type="number" min="1" max="5"onchange="model.viewState.log.sleepQuality = this.value" ></td>
               <td>  <input  type="text"onchange="model.viewState.log.notes = this.value"></td>
-              <td><button onclick="insertData(${index})">Legg Til</button></td>
+              <td><button onclick="insertData(${index})" id="overViewHeader">Legg Til</button></td>
              </tr>
                           `
         
