@@ -10,10 +10,10 @@ const model = {
       password: null,
     },
     createUser: {
-      username: null,
-      password: null,
-      repeatPassword: null,
-      displayName: null,
+      username: '',
+      password: '',
+      repeatPassword: '',
+      displayName: '',
     },
     editUser: {
       password: null,
