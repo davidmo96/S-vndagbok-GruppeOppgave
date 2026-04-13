@@ -16,7 +16,7 @@ function updateProfileView() {
         <span>${currentUser.displayName}</span>
             ${
               isEditing
-                ? `<button onclick="saveGoals()">Fullfør</button>`
+                ? `<button onclick="saveGoals()">Lagre</button>`
                 : `<button onclick="editGoals()">Rediger Mål</button>`
             }
         </section>
@@ -58,10 +58,6 @@ function updateProfileView() {
                 : `<span class="goal-box">${userGoals.wakeUpGoal}</span>`
             }
         </section>
-
-        <footer>
-            <button onclick="saveGoals()">Lagre</button>
-        </footer>
     </main>
 `;
 }
