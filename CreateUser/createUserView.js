@@ -5,20 +5,38 @@ createUserView()
 function createUserView() {
     createUserPage.innerHTML = /*HTML*/ `
 
-    <img id="shutiLogo" src="Shuti Logo.png">
+    <img id="shutiLogo" src="Pictures/Shuti Logo.png">
     
     <h1 id="createUserHeader">Create user</h1>
 
     <div id="pageContent">
-    <input type="text" placeholder="E-post" onchange="" class="input">
     <br>
-    <input type="text" placeholder="Brukernavn" onchange="" class="input">
+    <input type="text" placeholder="Brukernavn" onchange="(this.value)" class="input" required>
     <br>
-    <input type="password" placeholder="Passord" onchange="" class="input">
+    <input type="text" placeholder="Passord" onchange="(this.value)" class="input" required>
     <br>
-    <input type="password" placeholder="Gjenta passord" onchange="" class="input">
+    <input type="text" placeholder="Gjenta passord" onchange="(this.value)" class="input" required>
     <br>
-    <button class="button">Opprett bruker</button>
+    <button class="button" onclick="createUser()">Opprett bruker</button>
     </div>
 `
+}
+
+
+function createUser(username, password){
+    const newUser = {
+        username: username,
+        password: password,
+    }
+        
+
+viewState.login.push(newUser)
+
+/*
+if (){
+    loginView()
+}
+*/
+
+
 }
