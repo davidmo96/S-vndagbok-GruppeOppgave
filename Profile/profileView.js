@@ -14,6 +14,7 @@ function updateProfileView() {
 
         <section class="user-identity">
         <span>${currentUser.displayName}</span>
+        <br />
             ${
               isEditing
                 ? `<button onclick="saveGoals()">Lagre</button>`
