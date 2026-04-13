@@ -11,32 +11,42 @@ function createUserView() {
 
     <div id="pageContent">
     <br>
-    <input type="text" placeholder="Brukernavn" onchange="(this.value)" class="input" required>
+    <input 
+        type="text" 
+        placeholder="Brukernavn" 
+        oninput = "model.viewstate.createUser.username = this.value"
+        class="input" 
+        required>
     <br>
-    <input type="text" placeholder="Passord" onchange="(this.value)" class="input" required>
+    
+    <input 
+        type="text" 
+        placeholder="Passord" 
+        oninput = "model.viewstate.createUser.password = this.value"
+        class="input" 
+        required>
     <br>
-    <input type="text" placeholder="Gjenta passord" onchange="(this.value)" class="input" required>
+
+    <input 
+        type="text" 
+        placeholder="Gjenta passord" 
+        oninput = "model.viewstate.createUser.repeatPassword = this.value"
+        class="input" 
+        required>
     <br>
+
     <button class="button" onclick="createUser()">Opprett bruker</button>
     </div>
 `
 }
 
 
-function createUser(username, password){
+function createUser(username, password) {
     const newUser = {
         username: username,
         password: password,
     }
-        
+    viewState.login.push(newUser)
 
-viewState.login.push(newUser)
-
-/*
-if (){
-    loginView()
-}
-*/
-
-
+    return loginView()
 }
