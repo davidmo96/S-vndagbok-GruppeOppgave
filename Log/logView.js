@@ -61,3 +61,4 @@ function makeLog(){
 }
 
 
+// Se om noen lager funksjon for sidebytte. Hvis ikke, begynn på dette. - Evt mer CSS eller begynne på å lage "login" siden og funksjonene til denne.
