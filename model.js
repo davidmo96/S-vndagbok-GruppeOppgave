@@ -41,7 +41,6 @@ const model = {
     },
   },
 
-
   days: [
     "Mandag",
     "Tirsdag",
