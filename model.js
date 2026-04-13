@@ -32,6 +32,7 @@ const model = {
       notes: null,
       bedTime: null,
       wakeUp: null,
+      hoursSlept: null,
     },
     profile: {
       bedTimeGoal: null,
@@ -83,6 +84,7 @@ const model = {
           notes: "Sovet godt, men våknet noen ganger",
           bedTime: "22:30",
           wakeUp: "06:30",
+          hoursSlept: null,
         },
         {
           id: 1,
@@ -92,6 +94,7 @@ const model = {
           notes: "Fikk ikke sove",
           bedTime: "03:15",
           wakeUp: "07:00",
+          hoursSlept: null,
         },
         {
           id: 2,
@@ -101,6 +104,7 @@ const model = {
           notes: "Knuste alarmklokka i søvne",
           bedTime: "22:30",
           wakeUp: "10:00",
+          hoursSlept: null,
         },
         {
           id: 3,
@@ -110,6 +114,7 @@ const model = {
           notes: null,
           bedTime: null,
           wakeUp: null,
+          hoursSlept: null,
         },
         {
           id: 4,
@@ -119,6 +124,7 @@ const model = {
           notes: null,
           bedTime: null,
           wakeUp: null,
+          hoursSlept: null,
         },
         {
           id: 5,
@@ -128,6 +134,7 @@ const model = {
           notes: null,
           bedTime: null,
           wakeUp: null,
+          hoursSlept: null,
         },
         {
           id: 6,
@@ -137,6 +144,7 @@ const model = {
           notes: null,
           bedTime: null,
           wakeUp: null,
+          hoursSlept: null,
         },
       ],
     },
