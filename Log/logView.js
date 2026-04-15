@@ -23,6 +23,9 @@ function logView() {
     <table>
         <thead>
             <tr>
+            <th>Gjennomsnitt sovet hver dag: ${"test"}</th>
+            </tr>
+            <tr>
                 <th>Dag</th>
                 <th>Når sto du opp?</th>
                 <th>Når la du deg?</th>
@@ -51,7 +54,7 @@ function makeLog(){
             <td>${day.dayName}</td>
             <td>${day.bedTime ?? ''}</td>
             <td>${day.wakeUp ?? ''}</td>
-            <td>${day.calculatedSleep}</td>
+            <td>${day.hoursSlept ??''}</td>
             <td>${day.mood ?? ''}</td>
             <td>${day.sleepQuality ?? ''}</td>
             <td>${day.notes ?? ''}</td>

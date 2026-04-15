@@ -22,12 +22,10 @@ function sleepHoursCalculated(index){
              bedTimeHour = parseInt(bedTimeHourAndMin[0], 10);
              bedTimeMinute = parseInt(bedTimeHourAndMin[1], 10);
              bedTimeCalced = Number(bedTimeHour+bedTimeMinute/60);
-             console.log(bedTimeCalced);
              wakeUpHourAndMin =model.viewState.log.wakeUp.split(":")
              wakeUpHour = parseInt(wakeUpHourAndMin[0], 10);
              wakeUpMinute = parseInt(wakeUpHourAndMin[1], 10);
              wakeUpCalced = Number(wakeUpHour+wakeUpMinute/60);
-             console.log(wakeUpCalced);
              //Selve mattestykket for timer sovet
              sleepHours = 24-(Number(bedTimeCalced-wakeUpCalced));
              console.log("PM");
@@ -40,12 +38,10 @@ function sleepHoursCalculated(index){
              bedTimeHour = parseInt(bedTimeHourAndMin[0], 10);
              bedTimeMinute = parseInt(bedTimeHourAndMin[1], 10);
              bedTimeCalced = Number(bedTimeHour+bedTimeMinute/60);
-             console.log(bedTimeCalced);
              wakeUpHourAndMin =model.viewState.log.wakeUp.split(":")
              wakeUpHour = parseInt(wakeUpHourAndMin[0], 10);
              wakeUpMinute = parseInt(wakeUpHourAndMin[1], 10);
              wakeUpCalced = Number(wakeUpHour+wakeUpMinute/60);
-             console.log(wakeUpCalced);
              //Selve mattestykket for timer sovet
              sleepHours = Number(wakeUpCalced-bedTimeCalced);
              console.log("AM");
@@ -68,6 +64,7 @@ function pushToData(index){
      model.sleepLog[0].list[i].bedTime = model.viewState.log.bedTime;
      model.sleepLog[0].list[i].wakeUp = model.viewState.log.wakeUp;
      model.sleepLog[0].list[i].hoursSlept = model.viewState.log.hoursSlept;
+     averageSleepCalc(index)
     overViewEditMode(index);
 }
 
@@ -81,4 +78,13 @@ function checkValueScale(index){
     else {
         return index;
     }
+}
+
+function averageSleepCalc(index){
+        i = index
+        nmbForMath = Number(model.sleepLog[0].list[i].hoursSlept)
+    model.averageSleepData.forEach(nmbForMath => {
+        model.averageSleepData.push(nmbForMath);
+        console.log(model.averageSleepData)
+})
 }

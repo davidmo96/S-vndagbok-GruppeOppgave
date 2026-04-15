@@ -45,10 +45,10 @@ function addOverViewTable(index){
          for (let i = 0; i < tableList.length; i++) {
             const day = tableList[i];
             let color = "";
-            if(day.hoursSlept >= 8){
+            if(day.hoursSlept >= model.goals[0].amountSleptHours){
                 color = "green";
             }
-            else if(day.hoursSlept < 8 && day.hoursSlept != null){
+            else if(day.hoursSlept < model.goals[0].amountSleptHours && day.hoursSlept != null){
                 color = "red";
             }
             html += /*HTML*/ `
