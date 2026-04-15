@@ -4,8 +4,6 @@ body {
   font-size: 1.25rem;
   background-color: #0d3b66;
   color: white;
-  display: flex;
-  justify-content: center;
   width: 100%;
 }
 
@@ -36,12 +34,16 @@ body {
 .user-goals {
   margin-top: 20px;
   font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
 }
 
 h2 {
   width: 100%;
   text-align: left;
   margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
 }
 
 section {
