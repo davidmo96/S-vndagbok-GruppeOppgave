@@ -19,9 +19,7 @@ function updateProfileView() {
     </div>
     
     <main class="profile-page">
-        <header>
             <img id="shutiLogo" src="Pictures/Shuti Logo.png">
-        </header>
 
         <section class="user-identity">
         <span>${currentUser.displayName}</span>
