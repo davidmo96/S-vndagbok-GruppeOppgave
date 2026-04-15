@@ -16,7 +16,7 @@ function loginView() {
                 <button onclick="changePage('logView')" class="dropdownContentButtons">Logg</a>
                 <button onclick="changePage('overViewPage')" class="dropdownContentButtons">Oversikt</a>
                 <button onclick="changePage('profileView')" class="dropdownContentButtons">Profil</a>
-                <button onclick="" class="dropdownContentButtons">Logg ut</a>
+                <button onclick="logOut()" class="dropdownContentButtons">Logg ut</a>
             </div>
     </div>
 
@@ -26,9 +26,8 @@ function loginView() {
     type="text" 
     placeholder="Brukernavn" 
     class="input" 
-    oninput= "model.viewState.login.username = this.value
+    onchange= "model.viewState.login.username = this.value
     model.viewState.login.errorMessage = '';
-    updateView();
     "
     required>
     <br>
@@ -37,9 +36,8 @@ function loginView() {
     type="password" 
     placeholder="Passord" 
     class="input" 
-    oninput= "model.viewState.login.password = this.value
+    onchange= "model.viewState.login.password = this.value
     model.viewState.login.errorMessage = '';
-    updateView();
     "
     required>
     <br>

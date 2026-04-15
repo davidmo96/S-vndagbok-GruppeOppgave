@@ -6,8 +6,6 @@ const model = {
     currentUser: null,
   },
 
-  users:[{ username: "admin", password: "123", displayName: "Admin"}],
-
   viewState: {
     login: {
       username: null,
@@ -60,9 +58,9 @@ const model = {
   users: [
     {
       id: 0,
-      displayName: "Dio Brando",
-      username: "diobran@getacademy.no",
-      password: "konodioda",
+      displayName: "Admin",
+      username: "admin",
+      password: "123",
     },
   ],
 

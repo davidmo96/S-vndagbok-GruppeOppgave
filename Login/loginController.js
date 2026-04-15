@@ -24,5 +24,16 @@ function logInUser() {
     } else {
         model.viewState.login.errorMessage = 'Feil brukernavn eller passord!'
     }
-    updateView()
+    showOverView();
+}
+
+function logOut() {
+    model.app.currentUser = null;
+    model.app.currentPage = "login";
+
+    model.viewState.login.username = '';
+    model.viewState.login.password = '';
+    model.viewState.login.errorMessage = '';
+    
+    updateView();
 }
