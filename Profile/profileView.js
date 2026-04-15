@@ -1,7 +1,7 @@
 updateProfileView();
 
 function updateProfileView() {
-  const profileView = document.getElementById("profileView");
+  const profileView = document.getElementById("app");
   const currentUser = model.users[0];
   const userGoals = model.goals[0];
   const isEditing = model.viewState.overview.editmode;
