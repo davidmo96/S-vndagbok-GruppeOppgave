@@ -42,7 +42,7 @@ function loginView() {
     required>
     <br>
 
-    <div class="error">${model.viewState.login.errorMessage ?? ''}</div>
+    <div class="error">${model.viewState.login.errorMessage}</div>
 
     <button class="button" onclick="logInUser()">Logg inn</button>
     <p>Har du ingen bruker?</p>
