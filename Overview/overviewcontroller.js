@@ -64,7 +64,7 @@ function pushToData(index){
      model.sleepLog[0].list[i].bedTime = model.viewState.log.bedTime;
      model.sleepLog[0].list[i].wakeUp = model.viewState.log.wakeUp;
      model.sleepLog[0].list[i].hoursSlept = model.viewState.log.hoursSlept;
-     averageSleepCalc(index)
+    averageSleepCalc(index)
     overViewEditMode(index);
 }
 
@@ -80,11 +80,18 @@ function checkValueScale(index){
     }
 }
 
-function averageSleepCalc(index){
-        i = index
-        nmbForMath = Number(model.sleepLog[0].list[i].hoursSlept)
-    model.averageSleepData.forEach(nmbForMath => {
-        model.averageSleepData.push(nmbForMath);
-        console.log(model.averageSleepData)
-})
+function averageSleepCalc(){
+        let calc = 0
+        let daysSlept = 0
+
+    for(let i = 0; i < model.sleepLog[0].list.length; i++){
+        const sleep = model.sleepLog[0].list[i].hoursSlept;
+
+        if(sleep !== null){
+            calc += Number(sleep)
+            daysSlept ++
+
+        }
+    }
+    model.viewState.overview.averagesleep = Math.round(calc/daysSlept)
 }
