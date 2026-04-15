@@ -3,7 +3,7 @@ const app = document.getElementById("app");
 const model = {
   app: {
     currentPage: "login",
-    currentUser: user,
+    currentUser: null,
   },
 
   viewState: {
