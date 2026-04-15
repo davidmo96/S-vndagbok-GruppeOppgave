@@ -16,7 +16,7 @@ function logView() {
                 <button onclick="changePage('logView')" class="dropdownContentButtons">Logg</a>
                 <button onclick="changePage('overViewPage')" class="dropdownContentButtons">Oversikt</a>
                 <button onclick="changePage('profileView')" class="dropdownContentButtons">Profil</a>
-                <button onclick="" class="dropdownContentButtons">Logg ut</a>
+                <button onclick="logOut()" class="dropdownContentButtons">Logg ut</a>
             </div>
     </div>
     <br>
