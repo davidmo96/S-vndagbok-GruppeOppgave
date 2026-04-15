@@ -23,7 +23,7 @@ function logView() {
     <table>
         <thead>
             <tr>
-            <th>Gjennomsnitt sovet hver dag: ${"test"}</th>
+            <th>Gjennomsnitt sovet hver dag: ${model.viewState.overview.averagesleep}</th>
             </tr>
             <tr>
                 <th>Dag</th>
