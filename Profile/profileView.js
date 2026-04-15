@@ -14,10 +14,9 @@ function updateProfileView() {
 
         <section class="user-identity">
         <span>${currentUser.displayName}</span>
-        <br />
             ${
               isEditing
-                ? `<button onclick="saveGoals()">Lagre</button>`
+                ? `<button onclick="saveGoals()">Lagre Mål</button>`
                 : `<button onclick="editGoals()">Rediger Mål</button>`
             }
         </section>
@@ -30,12 +29,12 @@ function updateProfileView() {
             <span>Mengde søvn:</span>
             ${
               isEditing
-                ? `<input type="number" class="goal-box" value="${userGoals.amountSleptHours}" 
-                    oninput="model.goals[0].amountSleptHours = this.value"> Timer
-                    <input type="number" class="goal-box" value="${userGoals.amountSleptMinutes}" 
-                    oninput="model.goals[0].amountSleptMinutes = this.value"> Minutter`
-                : `<span class="goal-box">${userGoals.amountSleptHours} Timer</span>
-                    <span class="goal-box">${userGoals.amountSleptMinutes} Minutter</span>`
+                ? `<input type="number" class="goal-box" min="1" max="24" value="${userGoals.amountSleptHours}" 
+                    onchange="model.goals[0].amountSleptHours = this.value; updateProfileView()"> Timer
+                    <input type="number" class="goal-box" min="0" max="59" value="${userGoals.amountSleptMinutes}" 
+                    onchange="model.goals[0].amountSleptMinutes = this.value; updateProfileView()"> Minutter`
+                : `<span class="goal-box">${userGoals.amountSleptHours} </span> Timer
+                    <span class="goal-box">${userGoals.amountSleptMinutes} </span> Minutter`
             }
         </section>
 
@@ -44,14 +43,14 @@ function updateProfileView() {
             ${
               isEditing
                 ? `<input type="time" class="goal-box" value="${userGoals.bedTimeGoal}" 
-                    oninput="model.goals[0].bedTimeGoal = this.value">`
+                    onchange="model.goals[0].bedTimeGoal = this.value; updateProfileView()">`
                 : `<span class="goal-box">${userGoals.bedTimeGoal}</span>`
             }
             <span>til klokken:</span>
             ${
               isEditing
                 ? `<input type="time" class="goal-box" value="${userGoals.wakeUpGoal}" 
-                    oninput="model.goals[0].wakeUpGoal = this.value">`
+                    onchange="model.goals[0].wakeUpGoal = this.value; updateProfileView()">`
                 : `<span class="goal-box">${userGoals.wakeUpGoal}</span>`
             }
         </section>
