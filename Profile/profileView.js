@@ -1,4 +1,3 @@
-
 function updateProfileView() {
   const profileView = document.getElementById("app");
   const currentUser = model.users[0];
@@ -18,6 +17,7 @@ function updateProfileView() {
                 <button onclick="" class="dropdownContentButtons">Logg ut</a>
             </div>
     </div>
+    
     <main class="profile-page">
         <header>
             <img id="shutiLogo" src="Pictures/Shuti Logo.png">
