@@ -1,7 +1,6 @@
-const createUserPage = document.getElementById('createUserPage')
+const createUserPage = document.getElementById('app')
 
 
-createUserView()
 function createUserView() {
     createUserPage.innerHTML = /*HTML*/ `
 

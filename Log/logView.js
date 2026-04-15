@@ -1,6 +1,6 @@
-const logPage = document.getElementById('logView')
+const logPage = document.getElementById('app')
 
-logView()
+
 function logView() {
     logPage.innerHTML = /*HTML*/ `
 
@@ -13,8 +13,9 @@ function logView() {
         <img src="Pictures/menu.png" alt="Button Description" width="25" height="25">
         </button>
             <div class="dropdown-content">
-                <button onclick="" class="dropdownContentButtons">Oversikt</a>
-                <button onclick="" class="dropdownContentButtons">Rediger søvnønsker</a>
+                <button onclick="changePage('logView')" class="dropdownContentButtons">Logg</a>
+                <button onclick="changePage('overViewPage')" class="dropdownContentButtons">Oversikt</a>
+                <button onclick="changePage('profileView')" class="dropdownContentButtons">Profil</a>
                 <button onclick="" class="dropdownContentButtons">Logg ut</a>
             </div>
     </div>

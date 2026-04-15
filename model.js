@@ -2,7 +2,7 @@ const app = document.getElementById("app");
 
 const model = {
   app: {
-    currentPage: "mainpage",
+    currentPage: "login",
   },
   viewState: {
     login: {
