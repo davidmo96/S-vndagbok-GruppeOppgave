@@ -73,3 +73,8 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+.error {
+  color: red;
+  margin: 10px;
+}

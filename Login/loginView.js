@@ -20,13 +20,33 @@ function loginView() {
             </div>
     </div>
 
-
     <div id="pageContent">
-    <input type="text" placeholder="Brukernavn" onchange="" class="input" required>
+
+    <input 
+    type="text" 
+    placeholder="Brukernavn" 
+    class="input" 
+    oninput= "model.viewState.login.username = this.value
+    model.viewState.login.errorMessage = '';
+    updateView();
+    "
+    required>
     <br>
-    <input type="password" placeholder="Passord" onchange="" class="input" required>
+
+    <input 
+    type="password" 
+    placeholder="Passord" 
+    class="input" 
+    oninput= "model.viewState.login.password = this.value
+    model.viewState.login.errorMessage = '';
+    updateView();
+    "
+    required>
     <br>
-    <button class="button">Logg inn</button>
+
+    <div class="error">${model.viewState.login.errorMessage ?? ''}</div>
+
+    <button class="button" onclick="logInUser()">Logg inn</button>
     <p>Har du ingen bruker?</p>
     <button class="button1" onclick="createUserView()">Opprett bruker</button>
     </div>

@@ -3,11 +3,16 @@ const app = document.getElementById("app");
 const model = {
   app: {
     currentPage: "login",
+    currentUser: null,
   },
+
+  users:[{ username: "admin", password: "123", displayName: "Admin"}],
+
   viewState: {
     login: {
       username: null,
       password: null,
+      errorMessage: '',
     },
     createUser: {
       username: '',
