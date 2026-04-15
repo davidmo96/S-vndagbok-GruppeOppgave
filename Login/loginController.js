@@ -14,7 +14,7 @@ function logInUser() {
         u.username === username && u.password === password
     );
 
-    if (user) {
+    if (user && user.password === password) {
         model.app.currentUser = user;
         model.app.currentPage = "overViewPage";
         
