@@ -88,6 +88,7 @@ button {
   color: red;
   margin-top: 20px;
   text-align: center;
+  font-size: 1.25em;
   font-weight: bold;
   width: 100%;
 }
