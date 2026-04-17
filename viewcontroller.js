@@ -6,12 +6,17 @@ function changePage(newPage) {
 
 updateView();
 function updateView() {
+  console.log('page:',model.app.currentPage)
+  console.log('User:',model.app.currentUser)
+  if (model.app.currentUser == null){ model.app.currentPage = "login";
+  console.log("test")}
   if (model.app.currentPage === "logView") logView();
-  if (model.app.currentPage === "overViewPage") showOverView();
-  if (model.app.currentPage === "profileView") updateProfileView();
-
-  if (!model.app.currentUser) model.app.currentPage = "login";
-  if (model.app.currentPage === "login") loginView();
+  else if  (model.app.currentPage === "overViewPage") showOverView();
+  else if  (model.app.currentPage === "profileView") updateProfileView();
+  else if  (model.app.currentPage === "login") loginView();
+  else{
+    console.log("error")
+  }
 
 }
 

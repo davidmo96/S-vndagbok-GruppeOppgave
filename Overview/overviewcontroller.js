@@ -58,12 +58,13 @@ function sleepHoursCalculated(index){
 function pushToData(index){
     console.log(index);
      i = index
-     model.sleepLog[0].list[i].mood = model.viewState.log.mood;
-     model.sleepLog[0].list[i].sleepQuality = model.viewState.log.sleepQuality;
-     model.sleepLog[0].list[i].notes = model.viewState.log.notes;
-     model.sleepLog[0].list[i].bedTime = model.viewState.log.bedTime;
-     model.sleepLog[0].list[i].wakeUp = model.viewState.log.wakeUp;
-     model.sleepLog[0].list[i].hoursSlept = model.viewState.log.hoursSlept;
+     const sleepLog = findUserSleepLog()
+     sleepLog.list[i].mood = model.viewState.log.mood;
+     sleepLog.list[i].sleepQuality = model.viewState.log.sleepQuality;
+     sleepLog.list[i].notes = model.viewState.log.notes;
+     sleepLog.list[i].bedTime = model.viewState.log.bedTime;
+     sleepLog.list[i].wakeUp = model.viewState.log.wakeUp;
+     sleepLog.list[i].hoursSlept = model.viewState.log.hoursSlept;
     averageSleepCalc(index)
     overViewEditMode(index);
 }
@@ -83,9 +84,9 @@ function checkValueScale(index){
 function averageSleepCalc(){
         let calc = 0
         let daysSlept = 0
-
-    for(let i = 0; i < model.sleepLog[0].list.length; i++){
-        const sleep = model.sleepLog[0].list[i].hoursSlept;
+        const sleepLog = findUserSleepLog()
+    for(let i = 0; i < sleepLog.list.length; i++){
+        const sleep = sleepLog.list[i].hoursSlept;
 
         if(sleep !== null){
             calc += Number(sleep)

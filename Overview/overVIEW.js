@@ -34,16 +34,19 @@ addOverViewTable(index)
 }
 
 function addOverViewTable(index){
-    const tableList = model.sleepLog[0].list;
+    const sleepLog = findUserSleepLog()
+    const goals = findUserGoals()
+    const tableList = sleepLog.list;
+    console.log('goals check',goals)
     let html = '';
         if(model.viewState.editmode !== true){
          for (let i = 0; i < tableList.length; i++) {
             const day = tableList[i];
             let color = "";
-            if(day.hoursSlept >= model.goals[0].amountSleptHours){
+            if(day.hoursSlept >= goals.amountSleptHours){
                 color = "green";
             }
-            else if(day.hoursSlept < model.goals[0].amountSleptHours && day.hoursSlept != null){
+            else if(day.hoursSlept < goals.amountSleptHours && day.hoursSlept != null){
                 color = "red";
             }
             html += /*HTML*/ `

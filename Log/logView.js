@@ -40,7 +40,7 @@ makeLog()
 
 
 function makeLog(){
-    const logList = model.sleepLog[0].list;
+    const logList = findUserSleepLog().list;
     let html = '';
 
     for (let i = 0; i < logList.length; i++) {

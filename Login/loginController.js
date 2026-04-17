@@ -23,7 +23,7 @@ function logInUser() {
     );
 
     if (user) {
-        model.app.currentUser = user;
+        model.app.currentUser = user.id;
         model.app.currentPage = "overViewPage";
 
         model.viewState.login.username = '';
@@ -31,7 +31,6 @@ function logInUser() {
     } else {
         model.viewState.login.errorMessage = 'Feil brukernavn eller passord!';
     }
-
     updateView();
 }
 

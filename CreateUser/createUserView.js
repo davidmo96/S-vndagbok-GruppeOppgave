@@ -46,24 +46,25 @@ function createUser() {
         alert("Passordene matcher ikke")
         return
     }
+    const newid = generateId()
     model.users.push({
-        id: generateId(),
+        id: newid,
         displayName: model.viewState.createUser.username,
         username: model.viewState.createUser.username,
         password: model.viewState.createUser.password,
     })
-    model.goals.push([
+    model.goals.push(
     {
-      userID: generateId(),
+      userID: newid,
       bedTimeGoal: "22:00",
       wakeUpGoal: "06:00",
       amountSleptHours: 8,
       amountSleptMinutes: 0,
     },
-  ]),
+  ),
     model.sleepLog.push(
         {
-      userID: generateId(),
+      userID: newid,
       list: [
         {
           id: 0,
