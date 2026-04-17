@@ -10,12 +10,7 @@ function updateProfileView() {
         <button class="dropbtn">
         <img src="Pictures/menu.png" alt="Button Description" width="25" height="25">
         </button>
-            <div class="dropdown-content">
-                <button onclick="changePage('logView')" class="dropdownContentButtons">Logg</a>
-                <button onclick="changePage('overViewPage')" class="dropdownContentButtons">Oversikt</a>
-                <button onclick="changePage('profileView')" class="dropdownContentButtons">Profil</a>
-                <button onclick="logOut()" class="dropdownContentButtons">Logg ut</a>
-            </div>
+            <div>${createDropDownButton()}</div>
     </div>
     
     <main class="profile-page">
