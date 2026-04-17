@@ -4,7 +4,7 @@ function editGoals() {
 }
 
 function saveGoals() {
-  model.viewState.profile.ditModeGoals = false;
+  model.viewState.profile.editModeGoals = false;
   updateProfileView();
 }
 
