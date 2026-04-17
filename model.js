@@ -64,7 +64,6 @@ const model = {
     },
   ],
 
-  averageSleepData:[],
 
   goals: [
     {

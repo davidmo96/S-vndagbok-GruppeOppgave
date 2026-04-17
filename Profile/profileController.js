@@ -52,6 +52,6 @@ function getSleepGoalWarning() {
         av ${Number(sleepGoalHours.toFixed(1))} timer i søvnmålet ditt
       </span>`;
   }
-
+  model.goals.sleepGoalHours = sleepGoalHours;
   return "";
 }
