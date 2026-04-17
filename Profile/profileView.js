@@ -2,7 +2,7 @@ function updateProfileView() {
   const profileView = document.getElementById("app");
   const currentUser = model.users[0];
   const userGoals = model.goals[0];
-  const isEditing = model.viewState.overview.editmode;
+  const isEditingGoals = model.viewState.profile.editModeGoals;
 
   profileView.innerHTML = /*HTML*/ `
 
@@ -24,7 +24,7 @@ function updateProfileView() {
         <section class="user-identity">
         <span>${currentUser.displayName}</span>
             ${
-              isEditing
+              isEditingGoals
                 ? `<button onclick="saveGoals()">Lagre Mål</button>`
                 : `<button onclick="editGoals()">Rediger Mål</button>`
             }
@@ -37,7 +37,7 @@ function updateProfileView() {
         <section class="user-goals">
             <span>Mengde søvn:</span>
             ${
-              isEditing
+              isEditingGoals
                 ? `<input type="number" class="goal-box" min="1" max="24" value="${userGoals.amountSleptHours}" 
                     onchange="model.goals[0].amountSleptHours = this.value; updateProfileView()"> Timer
                     <input type="number" class="goal-box" min="0" max="59" value="${userGoals.amountSleptMinutes}" 
@@ -50,14 +50,14 @@ function updateProfileView() {
         <section class="user-goals">
             <span>Fra klokken:</span>
             ${
-              isEditing
+              isEditingGoals
                 ? `<input type="time" class="goal-box" value="${userGoals.bedTimeGoal}" 
                     onchange="model.goals[0].bedTimeGoal = this.value; updateProfileView()">`
                 : `<span class="goal-box">${userGoals.bedTimeGoal}</span>`
             }
             <span>til klokken:</span>
             ${
-              isEditing
+              isEditingGoals
                 ? `<input type="time" class="goal-box" value="${userGoals.wakeUpGoal}" 
                     onchange="model.goals[0].wakeUpGoal = this.value; updateProfileView()">`
                 : `<span class="goal-box">${userGoals.wakeUpGoal}</span>`

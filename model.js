@@ -10,13 +10,13 @@ const model = {
     login: {
       username: null,
       password: null,
-      errorMessage: '',
+      errorMessage: "",
     },
     createUser: {
-      username: '',
-      password: '',
-      repeatPassword: '',
-      displayName: '',
+      username: "",
+      password: "",
+      repeatPassword: "",
+      displayName: "",
     },
     editUser: {
       password: null,
@@ -41,6 +41,7 @@ const model = {
       bedTimeGoal: null,
       wakeUpGoal: null,
       amountSleptGoal: null,
+      editModeGoals: false,
     },
   },
 
@@ -63,7 +64,6 @@ const model = {
       password: "123",
     },
   ],
-
 
   goals: [
     {
