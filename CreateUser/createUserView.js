@@ -52,6 +52,92 @@ function createUser() {
         username: model.viewState.createUser.username,
         password: model.viewState.createUser.password,
     })
+    model.goals.push([
+    {
+      userID: generateId(),
+      bedTimeGoal: "22:00",
+      wakeUpGoal: "06:00",
+      amountSleptHours: 8,
+      amountSleptMinutes: 0,
+    },
+  ]),
+    model.sleepLog.push(
+        {
+      userID: generateId(),
+      list: [
+        {
+          id: 0,
+          dayName: "Mandag",
+          mood: null,
+          sleepQuality: null,
+          notes: null,
+          bedTime: null,
+          wakeUp: null,
+          hoursSlept: null,
+        },
+        {
+          id: 1,
+          dayName: "Tirsdag",
+          mood: null,
+          sleepQuality: null,
+          notes: null,
+          bedTime: null,
+          wakeUp: null,
+          hoursSlept: null,
+        },
+        {
+          id: 2,
+          dayName: "Onsdag",
+          mood: null,
+          sleepQuality: null,
+          notes: null,
+          bedTime: null,
+          wakeUp: null,
+          hoursSlept: null,
+        },
+        {
+          id: 3,
+          dayName: "Torsdag",
+          mood: null,
+          sleepQuality: null,
+          notes: null,
+          bedTime: null,
+          wakeUp: null,
+          hoursSlept: null,
+        },
+        {
+          id: 4,
+          dayName: "Fredag",
+          mood: null,
+          sleepQuality: null,
+          notes: null,
+          bedTime: null,
+          wakeUp: null,
+          hoursSlept: null,
+        },
+        {
+          id: 5,
+          dayName: "Lørdag",
+          mood: null,
+          sleepQuality: null,
+          notes: null,
+          bedTime: null,
+          wakeUp: null,
+          hoursSlept: null,
+        },
+        {
+          id: 6,
+          dayName: "Søndag",
+          mood: null,
+          sleepQuality: null,
+          notes: null,
+          bedTime: null,
+          wakeUp: null,
+          hoursSlept: null,
+        },
+      ],
+    },
+    )
     return loginView()
 }
 
