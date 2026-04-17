@@ -1,10 +1,10 @@
 function editGoals() {
-  model.viewState.overview.editmode = true;
+  model.viewState.profile.editModeGoals = true;
   updateProfileView();
 }
 
 function saveGoals() {
-  model.viewState.overview.editmode = false;
+  model.viewState.profile.ditModeGoals = false;
   updateProfileView();
 }
 
