@@ -3,6 +3,7 @@ function updateProfileView() {
   const currentUser = model.app.currentUser;
   const userGoals = findUserGoals();
   const isEditingGoals = model.viewState.profile.editModeGoals;
+
   profileView.innerHTML = /*HTML*/ `
 
   <div class="dropdown">
