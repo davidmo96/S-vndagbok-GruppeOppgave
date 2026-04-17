@@ -9,7 +9,7 @@ function saveGoals() {
 }
 
 function getSleepGoalWarning() {
-  const userGoals = model.goals[0];
+  const userGoals = findUserGoals();
 
   if (!userGoals.bedTimeGoal || !userGoals.wakeUpGoal) return "";
 
@@ -52,6 +52,7 @@ function getSleepGoalWarning() {
         av ${Number(sleepGoalHours.toFixed(1))} timer i søvnmålet ditt
       </span>`;
   }
+  userGoals.amountSleptHours = sleepGoalHours
 
   return "";
 }

@@ -1,9 +1,8 @@
 function updateProfileView() {
   const profileView = document.getElementById("app");
-  const currentUser = model.users[0];
-  const userGoals = model.goals[0];
+  const currentUser = model.app.currentUser;
+  const userGoals = findUserGoals();
   const isEditingGoals = model.viewState.profile.editModeGoals;
-
   profileView.innerHTML = /*HTML*/ `
 
   <div class="dropdown">
@@ -34,9 +33,9 @@ function updateProfileView() {
             ${
               isEditingGoals
                 ? `<input type="number" class="goal-box" min="1" max="24" value="${userGoals.amountSleptHours}" 
-                    onchange="model.goals[0].amountSleptHours = this.value; updateProfileView()"> Timer
+                    onchange="findUserGoals().amountSleptHours = this.value; updateProfileView()"> Timer
                     <input type="number" class="goal-box" min="0" max="59" value="${userGoals.amountSleptMinutes}" 
-                    onchange="model.goals[0].amountSleptMinutes = this.value; updateProfileView()"> Minutter`
+                    onchange="findUserGoals().amountSleptMinutes = this.value; updateProfileView()"> Minutter`
                 : `<span class="goal-box">${userGoals.amountSleptHours} </span> Timer
                     <span class="goal-box">${userGoals.amountSleptMinutes} </span> Minutter`
             }
@@ -47,14 +46,14 @@ function updateProfileView() {
             ${
               isEditingGoals
                 ? `<input type="time" class="goal-box" value="${userGoals.bedTimeGoal}" 
-                    onchange="model.goals[0].bedTimeGoal = this.value; updateProfileView()">`
+                    onchange="findUserGoals().bedTimeGoal = this.value; updateProfileView()">`
                 : `<span class="goal-box">${userGoals.bedTimeGoal}</span>`
             }
             <span>til klokken:</span>
             ${
               isEditingGoals
                 ? `<input type="time" class="goal-box" value="${userGoals.wakeUpGoal}" 
-                    onchange="model.goals[0].wakeUpGoal = this.value; updateProfileView()">`
+                    onchange="findUserGoals().wakeUpGoal = this.value; updateProfileView()">`
                 : `<span class="goal-box">${userGoals.wakeUpGoal}</span>`
             }
         </section>
