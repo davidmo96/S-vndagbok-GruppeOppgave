@@ -34,35 +34,10 @@ body {
   margin-bottom: 30px;
 }
 
-/*Input fields*/
-.input {
-  background-color: #2e4a66;
-  color: white;
-  font-size: large;
-  padding: 2px;
-  margin-top: 3px;
-  border-radius: 0.5rem;
-  width: 200px;
-}
-
 /*Makes page center*/
 #pageContent {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-/*Button styling*/
-.button {
-  background-color: #2e4a66;
-  padding: 5px;
-  border: solid black 1px;
-  border-radius: 0.3rem;
-  margin-top: 20px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  color: white;
-  width: 200px;
 }

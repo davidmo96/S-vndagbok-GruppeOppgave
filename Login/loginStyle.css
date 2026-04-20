@@ -5,7 +5,7 @@ body {
   background: -webkit-linear-gradient(to right, #4484ba, #004680);
   background: linear-gradient(to right, #4484ba, #004680);
   font-size: large;
-  font-family: serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /*Logo*/
@@ -25,7 +25,7 @@ body {
   align-items: center;
   color: #e3edf5;
   background-color: #2e4a66;
-  font-family: serif;
+  font-family: Arial, Helvetica, sans-serif;
   border-radius: 0.5rem;
   width: fit-content;
   padding: 5px;
@@ -34,32 +34,6 @@ body {
   margin-bottom: 30px;
 }
 
-/*Login button*/
-.button {
-  background-color: #2e4a66;
-  padding: 5px;
-  border-radius: 0.3rem;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  color: white;
-  border: solid black 1px;
-  margin-top: 20px;
-  width: 200px;
-}
-
-/*Create user button*/
-.button1 {
-  background-color: #2e4a66;
-  padding: 5px;
-  border-radius: 0.3rem;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  color: white;
-  border: solid black 1px;
-  width: 200px;
-}
 
 /*Input fields*/
 .input {
@@ -84,4 +58,44 @@ body {
 .error {
   color: red;
   margin: 10px;
+}
+
+
+/*____________________________________Buttons____________________________________*/
+.button {
+    padding: 13px 23px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    background-image: linear-gradient(to bottom right, #0f4c858e, #254975);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 0px #19385e;
+    transition: all 0.2s ease-in-out;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 0px #262b58;
+}
+
+.button:active {
+    transform: translateY(0px);
+    box-shadow: none;
+    background-image: linear-gradient(to bottom right, #175c9c8e, #254975);
+}
+
+/*** disabled style ***/
+.btn-101:disabled {
+    pointer-events: none;
+    opacity: .65;
+    color: #7e7e7e;
+    background: #dcdcdc;
+    box-shadow: none;
+    text-shadow: none;
 }

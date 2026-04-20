@@ -58,7 +58,7 @@ function addOverViewTable(index){
                 <td>${day.mood?? ''}</td>
                 <td>${day.sleepQuality?? ''}</td>
                 <td>${day.notes?? ''}</td>
-                <td><button onclick="overViewEditMode(${i})" id="overViewHeader">Rediger</button></td>
+                <td><button class="button" onclick="overViewEditMode(${i})" id="overViewHeader">Rediger</button></td>
              </tr>
                           `
     }
@@ -77,7 +77,7 @@ function addOverViewTable(index){
               <td>  <input  type="number" min="1" max="5"onchange="model.viewState.log.mood = checkValueScale(this.value)" ></td>
               <td>  <input type="number" min="1" max="5"onchange="model.viewState.log.sleepQuality = checkValueScale(this.value)" ></td>
               <td>  <input  type="text"onchange="model.viewState.log.notes = this.value"></td>
-              <td><button onclick="sleepHoursCalculated(${index})" id="overViewHeader">Legg Til</button></td>
+              <td><button class="button" onclick="sleepHoursCalculated(${index})" id="overViewHeader">Legg Til</button></td>
              </tr>
                           `
         

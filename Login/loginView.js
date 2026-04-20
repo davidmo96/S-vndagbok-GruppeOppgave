@@ -33,8 +33,9 @@ function loginView() {
     <div class="error">${model.viewState.login.errorMessage}</div>
 
     <button class="button" onclick="logInUser()">Logg inn</button>
+    <br>
     <p>Har du ingen bruker?</p>
-    <button class="button1" onclick="createUserView()">Opprett bruker</button>
+    <button class="button" onclick="createUserView()">Opprett bruker</button>
     </div>
 `
 }
