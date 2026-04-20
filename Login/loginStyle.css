@@ -37,8 +37,9 @@ body {
 
 /*Input fields*/
 .input {
-  background-color: #2e4a66;
-  color: white;
+  
+  background-image: linear-gradient(to bottom left, #235e96ce, #223f63);
+  color: rgb(0, 0, 0);
   font-size: large;
   padding: 2px;
   margin-top: 3px;
