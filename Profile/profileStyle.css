@@ -21,9 +21,6 @@ body {
 /*Makes page center*/
 .profile-page {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 /*Utseendet for "user identity"*/
@@ -102,4 +99,6 @@ button {
   font-size: 1.25em;
   font-weight: bold;
   width: 100%;
+  display: flex;
+  justify-content: center;
 }

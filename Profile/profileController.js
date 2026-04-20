@@ -49,10 +49,10 @@ function getSleepGoalWarning() {
     return /*HTML*/ ` 
       <span class="goal-warning">
         Dette tidsrommet dekker bare ${Number(hoursBetween.toFixed(1))} 
-        av ${Number(sleepGoalHours.toFixed(1))} timer i søvnmålet ditt
+        av ${Number(sleepGoalHours.toFixed(2))} timer i søvnmålet ditt
       </span>`;
   }
-  userGoals.amountSleptHours = sleepGoalHours
+  userGoals.amountSleptHours = sleepGoalHours;
 
   return "";
 }

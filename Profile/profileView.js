@@ -6,7 +6,7 @@ function updateProfileView() {
 
   profileView.innerHTML = /*HTML*/ `
 
-  <div class="dropdown">
+    <div class="dropdown">
         <button class="dropbtn">
         <img src="Pictures/menu.png" alt="Button Description" width="25" height="25">
         </button>
