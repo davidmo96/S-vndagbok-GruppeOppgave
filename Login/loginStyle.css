@@ -1,3 +1,4 @@
+/*Background*/
 body {
   background-color: #2e4172;
   background: #004680;
@@ -7,6 +8,7 @@ body {
   font-family: serif;
 }
 
+/*Logo*/
 #shutiLogo {
   width: 175px;
   height: auto;
@@ -15,6 +17,7 @@ body {
   margin-top: 20px;
 }
 
+/*Page header*/
 #loginHeader {
   display: flex;
   flex-direction: column;
@@ -31,6 +34,7 @@ body {
   margin-bottom: 30px;
 }
 
+/*Login button*/
 .button {
   background-color: #2e4a66;
   padding: 5px;
@@ -44,6 +48,7 @@ body {
   width: 200px;
 }
 
+/*Create user button*/
 .button1 {
   background-color: #2e4a66;
   padding: 5px;
@@ -56,6 +61,7 @@ body {
   width: 200px;
 }
 
+/*Input fields*/
 .input {
   background-color: #2e4a66;
   color: white;
@@ -66,6 +72,7 @@ body {
   width: 200px;
 }
 
+/*Makes page center*/
 #pageContent {
   display: flex;
   flex-direction: column;
@@ -73,6 +80,7 @@ body {
   align-items: center;
 }
 
+/*Login error message*/
 .error {
   color: red;
   margin: 10px;

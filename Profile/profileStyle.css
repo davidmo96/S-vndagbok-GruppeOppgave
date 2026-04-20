@@ -1,3 +1,4 @@
+/*Background*/
 body {
   background-color: #2e4172;
   background: #004680;
@@ -8,6 +9,7 @@ body {
   color: white;
 }
 
+/*Logo*/
 #shutiLogo {
   width: 175px;
   height: auto;
@@ -16,6 +18,7 @@ body {
   margin-top: 20px;
 }
 
+/*Makes page center*/
 .profile-page {
   width: 100%;
   display: flex;
@@ -23,6 +26,7 @@ body {
   align-items: center;
 }
 
+/*Utseendet for "user identity"*/
 .user-identity {
   font-size: 2.5rem;
   display: flex;
@@ -33,6 +37,7 @@ body {
   gap: 30px;
 }
 
+/*Utseendet for "user goals"*/
 .user-goals {
   margin-top: 20px;
   font-size: 1.5rem;
@@ -40,6 +45,7 @@ body {
   justify-content: center;
 }
 
+/*Utseende tekst på siden*/
 h2 {
   width: 100%;
   text-align: left;
@@ -77,6 +83,7 @@ input.goal-box {
   outline: none;
 }
 
+/*"Rediger mål" button*/
 button {
   background-color: #4a6fa5;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -87,6 +94,7 @@ button {
   font-size: large;
 }
 
+/*Utseendet på "goal warning"*/
 .goal-warning {
   color: #e53935;
   margin-top: 20px;
