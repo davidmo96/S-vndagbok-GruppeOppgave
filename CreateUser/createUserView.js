@@ -39,6 +39,7 @@ function createUserView() {
         oninput = "model.viewState.createUser.displayName = this.value"
         class="input" 
         required>
+        <br />
 
     <button class="button" onclick="createUser()">Opprett bruker</button>
     </div>
