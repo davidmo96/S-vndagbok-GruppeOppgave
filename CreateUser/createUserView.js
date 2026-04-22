@@ -56,7 +56,7 @@ function createUser() {
   const newid = generateId();
   model.users.push({
     id: newid,
-    displayName: model.viewState.createUser.username,
+    displayName: model.viewState.createUser.displayName,
     username: model.viewState.createUser.username,
     password: model.viewState.createUser.password,
   });

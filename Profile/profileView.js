@@ -1,6 +1,6 @@
 function updateProfileView() {
   const profileView = document.getElementById("app");
-  const currentUser = model.app.currentUser;
+  const user = identifyUser();
   const userGoals = findUserGoals();
   const isEditingGoals = model.viewState.profile.editModeGoals;
 
@@ -17,7 +17,7 @@ function updateProfileView() {
             <img id="shutiLogo" src="Pictures/Shuti Logo.png">
 
         <section class="user-identity">
-        <span>${currentUser.displayName}</span>
+        <span>${user.displayName}</span>
             ${
               isEditingGoals
                 ? `<button onclick="saveGoals()">Lagre Mål</button>`
