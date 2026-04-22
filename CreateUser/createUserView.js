@@ -1,8 +1,7 @@
-const createUserPage = document.getElementById('app')
-
+const createUserPage = document.getElementById("app");
 
 function createUserView() {
-    createUserPage.innerHTML = /*HTML*/ `
+  createUserPage.innerHTML = /*HTML*/ `
 
     <img id="shutiLogo" src="Pictures/Shuti Logo.png">
     
@@ -34,36 +33,41 @@ function createUserView() {
         required>
     <br>
 
+    <input 
+        type="text" 
+        placeholder="Visningsnavn" 
+        oninput = "model.viewState.createUser.displayName = this.value"
+        class="input" 
+        required>
+
     <button class="button" onclick="createUser()">Opprett bruker</button>
     </div>
-`
+`;
 }
 
-
 function createUser() {
-
-    if (model.viewState.createUser.password !== model.viewState.createUser.repeatPassword) {
-        alert("Passordene matcher ikke")
-        return
-    }
-    const newid = generateId()
-    model.users.push({
-        id: newid,
-        displayName: model.viewState.createUser.username,
-        username: model.viewState.createUser.username,
-        password: model.viewState.createUser.password,
-    })
-    model.goals.push(
-    {
-      userID: newid,
-      bedTimeGoal: "22:00",
-      wakeUpGoal: "06:00",
-      amountSleptHours: 8,
-      amountSleptMinutes: 0,
-    },
-  ),
-    model.sleepLog.push(
-        {
+  if (
+    model.viewState.createUser.password !==
+    model.viewState.createUser.repeatPassword
+  ) {
+    alert("Passordene matcher ikke");
+    return;
+  }
+  const newid = generateId();
+  model.users.push({
+    id: newid,
+    displayName: model.viewState.createUser.username,
+    username: model.viewState.createUser.username,
+    password: model.viewState.createUser.password,
+  });
+  (model.goals.push({
+    userID: newid,
+    bedTimeGoal: "22:00",
+    wakeUpGoal: "06:00",
+    amountSleptHours: 8,
+    amountSleptMinutes: 0,
+  }),
+    model.sleepLog.push({
       userID: newid,
       list: [
         {
@@ -137,15 +141,14 @@ function createUser() {
           hoursSlept: null,
         },
       ],
-    },
-    )
-    return loginView()
+    }));
+  return loginView();
 }
 
-function generateId(){
-    const number = Math.floor(Math.random()*999)
-    if(model.users.find(user => user.id == number)){
-        generateId()
-    }
-    return number
+function generateId() {
+  const number = Math.floor(Math.random() * 999);
+  if (model.users.find((user) => user.id == number)) {
+    generateId();
+  }
+  return number;
 }
