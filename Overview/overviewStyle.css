@@ -37,6 +37,12 @@ body {
   mask-image: radial-gradient(circle, black 70%, transparent 100%);
 }
 
+textarea {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
 /*________________________________Rutenett________________________________*/
 table {
   width: 100%;

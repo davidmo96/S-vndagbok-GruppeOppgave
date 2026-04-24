@@ -76,7 +76,7 @@ function addOverViewTable(index){
               <td></td>
               <td>  <input  type="number" min="1" max="5"onchange="model.viewState.log.mood = checkValueScale(this.value)" ></td>
               <td>  <input type="number" min="1" max="5"onchange="model.viewState.log.sleepQuality = checkValueScale(this.value)" ></td>
-              <td>  <input  type="text"onchange="model.viewState.log.notes = this.value"></td>
+              <td>  <textarea rows="4" cols="50" onchange="model.viewState.log.notes = this.value"></textarea></td>
               <td><button class="button" onclick="sleepHoursCalculated(${index})" id="overViewHeader">Legg Til</button></td>
              </tr>
                           `
