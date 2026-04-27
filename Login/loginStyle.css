@@ -43,8 +43,8 @@ body {
   
   background-image: linear-gradient(to bottom left, #235e96ce, #223f63);
   color: rgb(0, 0, 0);
-  font-size: large;
-  padding: 2px;
+  font-size: 18px;
+  padding: 12px 20px;;
   margin-top: 3px;
   border-radius: 0.5rem;
   width: 200px;
@@ -94,7 +94,7 @@ body {
     background-image: linear-gradient(to bottom right, #175c9c8e, #254975);
 }
 
-/*** disabled style ***/
+/* disabled style */
 .btn-101:disabled {
     pointer-events: none;
     opacity: .65;

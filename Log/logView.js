@@ -15,7 +15,6 @@ function logView() {
             <div>${createDropDownButton()}</div>
     </div>
 
-    </div>
     <br>
     <table>
         <thead>
@@ -35,11 +34,11 @@ function logView() {
         <tbody id="logTable"></tbody>
     </table>
     `
-makeLog()
+    makeLog()
 }
 
 
-function makeLog(){
+function makeLog() {
     const logList = findUserSleepLog().list;
     let html = '';
 
@@ -51,7 +50,7 @@ function makeLog(){
             <td>${day.dayName}</td>
             <td>${day.bedTime ?? ''}</td>
             <td>${day.wakeUp ?? ''}</td>
-            <td>${day.hoursSlept ??''}</td>
+            <td>${day.hoursSlept ?? ''}</td>
             <td>${day.mood ?? ''}</td>
             <td>${day.sleepQuality ?? ''}</td>
             <td>${day.notes ?? ''}</td>
