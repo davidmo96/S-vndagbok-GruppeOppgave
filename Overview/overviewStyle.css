@@ -1,9 +1,9 @@
 /*Background*/
 body {
-  background-color: #2e4172;
-  background: #004680;
   background: -webkit-linear-gradient(to right, #4484ba, #004680);
   background: linear-gradient(to right, #4484ba, #004680);
+  background-size: cover;
+  background-position: center;
   font-size: large;
   font-family: serif;
 }
@@ -18,7 +18,7 @@ body {
 }
 
 /*Page header*/
-#overViewHeader {
+.overViewHeader {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,12 +46,15 @@ textarea {
 /*________________________________Rutenett________________________________*/
 table {
   width: 100%;
-  border-collapse: collapse;
+  /*border-collapse: collapse;*/
+
+  border-radius: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 th,
 td {
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   padding: 10px;
   text-align: left;
   background-color: #6689a5;
@@ -119,41 +122,3 @@ th {
   background-color: #37599b;
 }
 
-/*________________________________Buttons________________________________*/
-.button {
-    padding: 13px 23px;
-    font-size: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #fff;
-    background-image: linear-gradient(to bottom right, #0f4c858e, #254975);
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0px 4px 0px #19385e;
-    transition: all 0.2s ease-in-out;
-    font-family: Arial, Helvetica, sans-serif;
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-}
-
-.button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0px 6px 0px #262b58;
-}
-
-.button:active {
-    transform: translateY(0px);
-    box-shadow: none;
-    background-image: linear-gradient(to bottom right, #175c9c8e, #254975);
-}
-
-/* disabled style */
-.btn-101:disabled {
-    pointer-events: none;
-    opacity: .65;
-    color: #7e7e7e;
-    background: #dcdcdc;
-    box-shadow: none;
-    text-shadow: none;
-}

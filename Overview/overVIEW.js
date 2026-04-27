@@ -6,7 +6,7 @@ function showOverView(index) {
 
         <img id="shutiLogo" src="Pictures/Shuti Logo.png">
     
-     <h1 id="overViewHeader" onclick="overViewEditMode()"> Oversikt </h1>
+     <h1 class="overViewHeader" onclick="overViewEditMode()"> Oversikt </h1>
 
     <div class="dropdown">
         <button class="dropbtn">
@@ -58,7 +58,7 @@ function addOverViewTable(index){
                 <td>${day.mood?? ''}</td>
                 <td>${day.sleepQuality?? ''}</td>
                 <td>${day.notes?? ''}</td>
-                <td><button class="button" onclick="overViewEditMode(${i})" id="overViewHeader">Rediger</button></td>
+                <td><button class="button" onclick="overViewEditMode(${i})">Rediger</button></td>
              </tr>
                           `
     }
@@ -77,7 +77,7 @@ function addOverViewTable(index){
               <td>  <input  type="number" min="1" max="5"onchange="model.viewState.log.mood = checkValueScale(this.value)" ></td>
               <td>  <input type="number" min="1" max="5"onchange="model.viewState.log.sleepQuality = checkValueScale(this.value)" ></td>
               <td>  <textarea rows="4" cols="50" onchange="model.viewState.log.notes = this.value"></textarea></td>
-              <td>  <button class="button" onclick="sleepHoursCalculated(${index})" id="overViewHeader">Legg Til</button></td>
+              <td>  <button class="button" onclick="sleepHoursCalculated(${index})">Legg til</button></td>
              </tr>
                           `
         

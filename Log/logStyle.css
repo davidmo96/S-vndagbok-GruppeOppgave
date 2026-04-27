@@ -5,6 +5,8 @@ body {
   background-position: center;
   font-size: large;
   font-family: serif;
+  background-attachment: fixed; 
+  background-repeat: no-repeat;
 }
 
 #shutiLogo {

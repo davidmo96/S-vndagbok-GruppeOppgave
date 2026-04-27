@@ -1,11 +1,13 @@
 /*Background*/
 body {
-  background-color: #2e4172;
-  background: #004680;
   background: -webkit-linear-gradient(to right, #4484ba, #004680);
   background: linear-gradient(to right, #4484ba, #004680);
+  background-size: cover;
+  background-position: center;
   font-size: large;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: serif;
+  background-attachment: fixed; 
+  background-repeat: no-repeat;
 }
 
 /*Logo*/
