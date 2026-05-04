@@ -61,7 +61,7 @@ const model = {
       id: 0,
       displayName: "Admin",
       username: "admin",
-      password: "123",
+      password: "Admin123",
     },
   ],
 
